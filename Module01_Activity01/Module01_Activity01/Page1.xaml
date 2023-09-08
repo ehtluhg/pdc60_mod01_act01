@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module01_Activity01.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Layout-Specific Resource Dictionaries -->
+            <Grid>
+                <Grid.Resources>
+                    <Style x:Key="SubmitButton" TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="Blue"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                    <Style x:Key="WarningButton" TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="Red"/>
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Text="Submit" Style="{StaticResource SubmitButton}" Grid.Row="0"/>
+                <Button Text="Register" Style="{StaticResource SubmitButton}" Grid.Row="1"/>
+                <Button Text="Signup" Style="{StaticResource SubmitButton}" Grid.Row="2"/>
+                <Button Text="Log Out" Style="{StaticResource WarningButton}" Grid.Row="3"/>
+            </Grid>
+            
+            <!-- View-Specific Resource Dictionary -->
+            <Button>
+                <Button.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Text" Value="Submit"/>
+                        <Setter Property="BackgroundColor" Value="Gray"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
